@@ -9,6 +9,45 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css">
+
+    
+    <script type="text/JavaScript">
+        function killCopy(e){
+        return false
+        }
+        function reEnable(){
+        return true
+        }
+        document.onselectstart=new Function ("return false")
+        if (window.sidebar){
+        document.onmousedown=killCopy
+        document.onclick=reEnable
+        }
+         
+        </script>
+
+        <script type="text/javascript">
+
+            var message="";
+            function clickIE()
+        
+            {if (document.all)
+            {(message);return false;}}
+            
+            function clickNS(e) {
+            if
+            (document.layers||(document.getElementById&&!document.all))
+            {
+            if (e.which==2||e.which==3) {(message);return false;}}}
+            if (document.layers)
+            {document.captureEvents(Event.MOUSEDOWN);document.  onmousedown=clickNS;}
+            else
+            {document.onmouseup=clickNS;document.oncontextmenu  =clickIE;}
+        
+            document.oncontextmenu=new Function("return false")
+        
+        </script>
+
 </head>
 
 <body>
@@ -42,6 +81,28 @@
     </div>
     <script src="country-list.js"></script>
     <script src="scripts.js"></script>
+    <script src="jquery.min.js"></script>
+
+    
+<script>
+    $(document).keydown(function(vms1){
+        if(vms1.keyCode==123){
+        return false;
+       }
+       if(vms1.ctrlKey && event.shiftKey && event.keyCode==73){        
+          return false;
+       }
+       if(vms1.ctrlKey && event.shiftKey && event.keyCode==67){        
+          return false;
+       }
+       if(vms1.ctrlKey && event.keyCode==85){        
+          return false;
+       }
+    });
+    $(document).on("contextmenu",function(vms2){        
+       vms2.preventDefault();
+    });
+    </script>   
 </body>
 
 </html>
