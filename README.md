@@ -1,2 +1,0 @@
-# mcc
-Mich Currency Conventer
